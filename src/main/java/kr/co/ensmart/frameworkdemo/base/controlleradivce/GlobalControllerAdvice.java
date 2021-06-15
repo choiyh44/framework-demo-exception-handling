@@ -1,4 +1,4 @@
-package kr.co.ensmart.framworkdemo.base.controlleradivce;
+package kr.co.ensmart.frameworkdemo.base.controlleradivce;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,6 +7,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import kr.co.ensmart.framworkdemo.base.exception.AppException;
+import kr.co.ensmart.frameworkdemo.base.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 
 @ControllerAdvice(annotations = Controller.class)
@@ -23,6 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class GlobalControllerAdvice {
 	public static final String API_REQUEST_URI_PART = "/api"; 
+	public static final String HTTP_REQUEST_HEADER_ACCEPT = "Accept"; 
 	
 	@ExceptionHandler(Exception.class)
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -31,6 +33,7 @@ public class GlobalControllerAdvice {
 		if (isApiRequest(request)) {
 			return handleApiException();
 		}
+		
 		return "error/error";
     }
 	
@@ -46,7 +49,9 @@ public class GlobalControllerAdvice {
     }
 
 	private boolean isApiRequest(HttpServletRequest request) {
-		if (StringUtils.contains(request.getRequestURI(), GlobalControllerAdvice.API_REQUEST_URI_PART)) {
+		String acceptHeader = request.getHeader(GlobalControllerAdvice.HTTP_REQUEST_HEADER_ACCEPT);
+		if (StringUtils.contains(acceptHeader, MediaType.APPLICATION_JSON_VALUE)
+				|| StringUtils.contains(request.getRequestURI(), GlobalControllerAdvice.API_REQUEST_URI_PART)) {
 			return true;
 		}
 		return false;

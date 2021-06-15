@@ -1,11 +1,11 @@
-package kr.co.ensmart.framworkdemo.base.controlleradivce;
+package kr.co.ensmart.frameworkdemo.base.controlleradivce;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import kr.co.ensmart.framworkdemo.base.exception.AppException;
+import kr.co.ensmart.frameworkdemo.base.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 
 // TODO RestController 클래스를 구분하영 작성할 경우 

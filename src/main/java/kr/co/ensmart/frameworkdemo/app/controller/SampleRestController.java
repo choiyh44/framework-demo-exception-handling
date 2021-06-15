@@ -1,10 +1,10 @@
-package kr.co.ensmart.framworkdemo.app.controller;
+package kr.co.ensmart.frameworkdemo.app.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kr.co.ensmart.framworkdemo.base.exception.AppException;
+import kr.co.ensmart.frameworkdemo.base.exception.AppException;
 
 @RestController
 @RequestMapping("/sample/api")

@@ -1,13 +1,13 @@
-package kr.co.ensmart.framworkdemo;
+package kr.co.ensmart.frameworkdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FramworkDemoExceptionHandlingApplication {
+public class FrameworkDemoExceptionHandlingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FramworkDemoExceptionHandlingApplication.class, args);
+		SpringApplication.run(FrameworkDemoExceptionHandlingApplication.class, args);
 	}
 
 }

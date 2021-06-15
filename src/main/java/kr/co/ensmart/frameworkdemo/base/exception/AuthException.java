@@ -1,4 +1,4 @@
-package kr.co.ensmart.framworkdemo.base.exception;
+package kr.co.ensmart.frameworkdemo.base.exception;
 
 public class AuthException extends AppException {
 	private static final long serialVersionUID = 4276546708698438827L;

@@ -1,4 +1,4 @@
-package kr.co.ensmart.framworkdemo.base.controlleradivce;
+package kr.co.ensmart.frameworkdemo.base.controlleradivce;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

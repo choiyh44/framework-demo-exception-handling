@@ -1,4 +1,4 @@
-package kr.co.ensmart.framworkdemo.base.exception;
+package kr.co.ensmart.frameworkdemo.base.exception;
 
 import lombok.Getter;
 
