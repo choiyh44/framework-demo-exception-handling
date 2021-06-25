@@ -1,4 +1,4 @@
 server.error:
-#  include-exception: true
+  include-exception: true
   include-stacktrace: never 
   
