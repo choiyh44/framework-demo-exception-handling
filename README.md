@@ -1,4 +1,5 @@
 # framework-demo-exception-handling
+- [Spring 참조](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.developing-web-applications.spring-mvc.error-handling)
 - 스프링 부트에서는 오류발생 시 처리를 위해 /error 맵핑이 제공된다.
   - machine client에는 오류status와 메세지를 포함한 JSON 응답이 제공되고
   - browser client에는 html 형태의 "white lebel" error view가 제공된다.
