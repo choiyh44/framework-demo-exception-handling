@@ -4,7 +4,17 @@
   - machine client에는 오류status와 메세지를 포함한 JSON 응답이 제공되고
   - browser client에는 html 형태의 "white lebel" error view가 제공된다.
 - server.error properties 설정으로 오류 동작을 customizing할 수 있다.
-- BasicErrorController상속하여 ErrorController 를 새로 작성할 수도 있다.
+
+| Name | Description | Default value |
+|---|---|---|
+| server.error.include-binding-errors | When to include "errors" attribute. |never |
+| server.error.include-exception | Include the "exception" attribute. | false |
+| server.error.include-message | When to include "message" attribute. | never | 
+| server.error.include-stacktrace | When to include the "trace" attribute. | never | 
+| server.error.path | Path of the error controller. | /error |
+| server.error.whitelabel.enabled | Whether to enable the default error page displayed in browsers in case of a server error. | true |
+
+- BasicErrorController상속하여 ErrorController 를 새로 작성할 수도 있다. 
 - @ControllerAdvice 클래스를 작성하여 오류처리를 할 수도있다.(일반적으로 가장 많이 쓰이는 방식이 아닐까?)
 - Custom Error Page
   - /error 폴더 아래에 404.html 50x.html 등을 넣어두면 해당 오류상태 시 해당 페이지가 표시된다.
