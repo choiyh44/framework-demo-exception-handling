@@ -26,8 +26,8 @@ public class GlobalControllerAdvice {
 	public static final String API_REQUEST_URI_PART = "/api"; 
 	public static final String HTTP_REQUEST_HEADER_ACCEPT = "Accept"; 
 	
-	@ExceptionHandler(Exception.class)
-	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+//	@ExceptionHandler(Exception.class)
+//	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Object handleException(Exception e, HttpServletRequest request) {
 		log.error("", e);
 		if (isApiRequest(request)) {

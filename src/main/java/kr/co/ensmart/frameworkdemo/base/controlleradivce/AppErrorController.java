@@ -26,10 +26,10 @@ public class AppErrorController implements ErrorController {
 	        Integer statusCode = Integer.valueOf(status.toString());
 	    
 	        if(statusCode == HttpStatus.NOT_FOUND.value()) {
-	            return "error-404";
+	            return "error/4XX";
 	        }
 	        else if(statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
-	            return "error-500";
+	            return "error/5XX";
 	        }
 	    }
 	    return "error";
